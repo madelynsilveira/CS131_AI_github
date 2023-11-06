@@ -1,0 +1,52 @@
+*******************************************************************************
+CS131: Artificial Intelligence
+A4: Sudoku, Solving CSPs
+*******************************************************************************
+Submission by Madelyn Silveira
+Due: 03/30/2023
+
+-------------------------------------------------------------------------------
+Included in this assignment:
+main.py     -- runs functions defined in search.py and displays solution using
+               functions in sudoku.py
+
+search.py   -- implementation of backtracking search algorithm to solve CSP
+
+sudoku.py   -- contains functions for printing a sudoku board and checking if 
+               it contains a valid solution
+              
+globals.py  -- holds global variables, primarily the boards to test on
+
+README      -- this file. Describes implementation of the problem being solved
+
+-------------------------------------------------------------------------------
+SUDOKU 
+
+variables:
+- open squares
+
+domains:
+- ints {1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+hard constraints:
+- numbers in each 9x9 square grid must contain only ints [1,9], with no repeats.
+- numbers in each row and column must adhere to same alldiff rule as above.
+
+algorithm: 
+Use a backtracking algorithm to find a solution that satisfies all constraints.
+Apply forward checking to minimize unneccessary comparisons. 
+
+-------------------------------------------------------------------------------
+Solving the Problem
+
+Use a standard uninformed search algorithm, to find a solution that satisfies 
+all the constraints. The algorithm only considers one assignment at a time, 
+applying forward checking to understand possible solutions for the current 
+value. It recursively calls itself to check if the board is solved, and if not,
+it will backtrack to other potential solutions.
+
+This implementation of sudoku is not perfect. If you refer to globals.py, this 
+algorithm works on a FULL and EMPTY board, as well as on TESTs 2, 3, 4, and 5. 
+For some reason TEST1, the easier of the two boards provided for this 
+assignment, does not work, while the more difficult board is handled fine by my 
+algorithm.

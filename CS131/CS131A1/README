@@ -1,0 +1,37 @@
+*******************************************************************************
+CS131: Artificial Intelligence
+A1: Behavior Trees
+*******************************************************************************
+Submission by Madelyn Silveira
+02/12/2023
+
+Implementation done in python.
+
+Files added to provided implementation:
+1. gen_clean.py
+    Implementation of general-cleaning related tasks and conditional.
+2. spot_clean.py
+    Implementation of spot-cleaning related tasks and conditional.
+3. nothing.py
+    Implementation of DoNothing task.
+
+To run:
+Run main.py and provide prompted input.
+/usr/bin/python3 ./py_student_1.0.2/main.py
+
+Design:
+The AI for this roomba was implemented using a simplified Behavior Tree. 
+
+Reflection:
+A few things made me a little uneasy about this assignment. Firstly, I 
+implemented my priority composite to completely ignore RUNNING state 
+information, as it was described to do. This meant, however, that the roomba 
+would theoretically be doing multiple things at once, like cleaning a spot 
+while also "Doing nothing", which didn't really make sense to me but I 
+figured it was the result of a simplified implementation. 
+Second, I was a little unsure of how CleanFloor should be implemented. I made 
+it repeat until failure, as shown on the tree, but if it fails when there's 
+nothing more to clean, then you won't be done with general cleaning when 
+there's nothing more to clean. I think I got a little confused around the 
+logistics of the roomba so I tried to follow the code of the tree as closely 
+as I could.

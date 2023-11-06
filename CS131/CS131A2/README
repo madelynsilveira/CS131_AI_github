@@ -1,0 +1,35 @@
+****************************************************************************
+Artificial i=Intelligence
+Assignment 2: Informed Search
+Madelyn Silveira
+Feb 22, 2023
+****************************************************************************
+
+Implementation of the pancake problem using the A* search algorithm.
+
+Defingin the problem:
+
+The heuristic function for the A* algorithm estimates the forward cost from a 
+given state to the goal. Based on the specifics of this problem, the heuristic 
+function will be defined as the number of pancakes that are currently out of 
+position in the stack. 
+
+The cost function for the A* algorithm calculates a cost for each state of the 
+problem. Based on the specifics of this problem, this will be defined as the 
+number of flips neccessary to sort a given stack of pancakes. 
+
+Together, the cost of the current stack and the cost of the flips so far 
+determine the priority of each stack. 
+
+
+Could the Uniform-Cost Search Algorithm be used for this problem?
+Yes. When the cost of each flip is non-negative, the cost of a path is defined 
+as the sum of the neccessary flips. The A* algorithm is a more efficient 
+solution to this problem, but it's not a big deal when the number of 
+pancakes is only 10.
+
+Cost function: Flips neccessary to sort current stack of pancakes. 
+Implementation provided in uniform_cost.py.
+
+
+I'm sorry I wasn't able to finish this in time. I had fun trying.
